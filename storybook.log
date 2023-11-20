@@ -1,0 +1,84 @@
+npm WARN deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+npm WARN deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+npm WARN deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+npm WARN cleanup Failed to remove some directories [
+npm WARN cleanup   [
+npm WARN cleanup     'D:\\Project\\my-project\\react-flow\\node_modules\\@swc\\core',
+npm WARN cleanup     [Error: EBUSY: resource busy or locked, rmdir 'D:\Project\my-project\react-flow\node_modules\@swc\core'] {
+npm WARN cleanup       errno: -4082,
+npm WARN cleanup       code: 'EBUSY',
+npm WARN cleanup       syscall: 'rmdir',
+npm WARN cleanup       path: 'D:\\Project\\my-project\\react-flow\\node_modules\\@swc\\core'
+npm WARN cleanup     }
+npm WARN cleanup   ]
+npm WARN cleanup ]
+npm ERR! code 1
+npm ERR! path D:\Project\my-project\react-flow\node_modules\esbuild
+npm ERR! command failed
+npm ERR! command C:\WINDOWS\system32\cmd.exe /d /s /c node install.js
+npm ERR! node:internal/errors:865
+npm ERR!   const err = new Error(message);
+npm ERR!               ^
+npm ERR! 
+npm ERR! Error: Command failed: C:\Program Files\nodejs\node.exe D:\Project\my-project\react-flow\node_modules\esbuild\bin\esbuild --version
+npm ERR! node:internal/errors:496
+npm ERR!     ErrorCaptureStackTrace(err);
+npm ERR!     ^
+npm ERR! 
+npm ERR! TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension "" for D:\Project\my-project\react-flow\node_modules\esbuild\bin\esbuild
+npm ERR!     at new NodeError (node:internal/errors:405:5)
+npm ERR!     at Object.getFileProtocolModuleFormat [as file:] (node:internal/modules/esm/get_format:79:11)
+npm ERR!     at defaultGetFormat (node:internal/modules/esm/get_format:124:36)
+npm ERR!     at defaultLoad (node:internal/modules/esm/load:89:20)
+npm ERR!     at nextLoad (node:internal/modules/esm/loader:163:28)
+npm ERR!     at load$1 (file:///D:/msys64/tmp/xfs-b45b5c49/dlx-37004/.pnp.loader.mjs:1487:12)
+npm ERR!     at nextLoad (node:internal/modules/esm/loader:163:28)
+npm ERR!     at ESMLoader.load (node:internal/modules/esm/loader:603:26)
+npm ERR!     at ESMLoader.moduleProvider (node:internal/modules/esm/loader:457:22)
+npm ERR!     at new ModuleJob (node:internal/modules/esm/module_job:64:26) {
+npm ERR!   code: 'ERR_UNKNOWN_FILE_EXTENSION'
+npm ERR! }
+npm ERR! 
+npm ERR! Node.js v18.18.2
+npm ERR! 
+npm ERR!     at checkExecSyncError (node:child_process:890:11)
+npm ERR!     at Object.execFileSync (node:child_process:926:15)
+npm ERR!     at validateBinaryVersion (D:\Project\my-project\react-flow\node_modules\esbuild\install.js:98:28)
+npm ERR!     at D:\Project\my-project\react-flow\node_modules\esbuild\install.js:283:5 {
+npm ERR!   status: 1,
+npm ERR!   signal: null,
+npm ERR!   output: [
+npm ERR!     null,
+npm ERR!     Buffer(0) [Uint8Array] [],
+npm ERR!     Buffer(960) [Uint8Array] [
+npm ERR!       110, 111, 100, 101,  58, 105, 110, 116, 101, 114, 110,  97,
+npm ERR!       108,  47, 101, 114, 114, 111, 114, 115,  58,  52,  57,  54,
+npm ERR!        13,  10,  32,  32,  32,  32,  69, 114, 114, 111, 114,  67,
+npm ERR!        97, 112, 116, 117, 114, 101,  83, 116,  97,  99, 107,  84,
+npm ERR!       114,  97,  99, 101,  40, 101, 114, 114,  41,  59,  13,  10,
+npm ERR!        32,  32,  32,  32,  94,  13,  10,  13,  10,  84, 121, 112,
+npm ERR!       101,  69, 114, 114, 111, 114,  32,  91,  69,  82,  82,  95,
+npm ERR!        85,  78,  75,  78,  79,  87,  78,  95,  70,  73,  76,  69,
+npm ERR!        95,  69,  88,  84,
+npm ERR!       ... 860 more items
+npm ERR!     ]
+npm ERR!   ],
+npm ERR!   pid: 31684,
+npm ERR!   stdout: Buffer(0) [Uint8Array] [],
+npm ERR!   stderr: Buffer(960) [Uint8Array] [
+npm ERR!     110, 111, 100, 101,  58, 105, 110, 116, 101, 114, 110,  97,
+npm ERR!     108,  47, 101, 114, 114, 111, 114, 115,  58,  52,  57,  54,
+npm ERR!      13,  10,  32,  32,  32,  32,  69, 114, 114, 111, 114,  67,
+npm ERR!      97, 112, 116, 117, 114, 101,  83, 116,  97,  99, 107,  84,
+npm ERR!     114,  97,  99, 101,  40, 101, 114, 114,  41,  59,  13,  10,
+npm ERR!      32,  32,  32,  32,  94,  13,  10,  13,  10,  84, 121, 112,
+npm ERR!     101,  69, 114, 114, 111, 114,  32,  91,  69,  82,  82,  95,
+npm ERR!      85,  78,  75,  78,  79,  87,  78,  95,  70,  73,  76,  69,
+npm ERR!      95,  69,  88,  84,
+npm ERR!     ... 860 more items
+npm ERR!   ]
+npm ERR! }
+npm ERR! 
+npm ERR! Node.js v18.18.2
+
+npm ERR! A complete log of this run can be found in: C:\Users\bt-rnd6-user\AppData\Local\npm-cache\_logs\2023-11-20T01_24_53_608Z-debug-0.log
