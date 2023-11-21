@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/nextjs'
+import { mergeConfig } from 'vite'
 
 const config: StorybookConfig = {
   stories: [
@@ -20,8 +21,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-  core: {
-    builder: '@storybook/builder-vite',
-  },
 }
+
 export default config
