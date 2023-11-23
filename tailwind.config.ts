@@ -1,10 +1,14 @@
 import type { Config } from 'tailwindcss'
 
+const px0_10 = { ...Array.from(Array(11)).map((_, i) => `${i}px`) }
+const px0_100 = { ...Array.from(Array(101)).map((_, i) => `${i}px`) }
+const px0_200 = { ...Array.from(Array(201)).map((_, i) => `${i}px`) }
+
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     colors: {
@@ -56,6 +60,7 @@ const config: Config = {
       },
     },
   },
+  corePlugins: { preflight: false },
   plugins: [require('@tailwindcss/typography')],
 }
 export default config
