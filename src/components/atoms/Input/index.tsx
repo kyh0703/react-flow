@@ -8,6 +8,7 @@ const Input = ({ placeholder, hasError, hasBorder }: InputProps) => (
   <input
     type="text"
     placeholder={placeholder}
+    css=[{'focus:outline-none focus:ring-0 box-border pt-3 pr-3 pb-3 pl-2 w-full h-10 leading-5 text-base'}]
     className={`
         focus:outline-none
         focus:ring-0
