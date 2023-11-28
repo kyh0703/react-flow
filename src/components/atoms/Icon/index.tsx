@@ -1,3 +1,4 @@
+import { colors } from '@/themes'
 import {
   Search,
   PersonOutline,
@@ -13,16 +14,37 @@ import {
   Google,
 } from '@mui/icons-material'
 import SvgIcon from '@mui/material/SvgIcon'
+import tw, { styled, css } from 'twin.macro'
+
+export type ThemeColors = keyof typeof colors
 
 type IconWrapperProps = {
   size: number
   cursor?: string
-  background?: string
+  color?: ThemeColors
+  backgroundColor?: string
 }
+
+const IconWrapper = styled.div<IconWrapperProps>(
+  ({ size, cursor, color, backgroundColor }) => [
+    tw`inline-block`,
+    css`
+      color: ${color ? colors[color] : colors.icon};
+      background-color: ${backgroundColor};
+      font-size: ${size}px;
+      width: ${size}px;
+      height: ${size}px;
+      cursor: ${cursor ? cursor : 'pointer'};
+      svg {
+        display: block;
+      }
+    `,
+  ],
+)
 
 export type IconButtonProps = {
   onClick?: React.MouseEventHandler<SVGSVGElement>
-  color?: string
+  color?: ThemeColors
   className?: string
   backgroundColor?: string
   size?: number
@@ -36,25 +58,14 @@ function withIconStyle(
     const cursor = onClick ? 'pointer' : 'default'
 
     return (
-      <div
-        style={{
-          fontSize: `${size}px`,
-          width: `${size}px`,
-          height: `${size}px`,
-        }}
-        className={`
-          inline-block
-          cursor-${cursor}
-        `}
-        {...rest}
-      >
+      <IconWrapper cursor={cursor} size={size} {...rest}>
         <Icon
           className={className}
           fontSize="inherit"
           color="inherit"
           onClick={onClick}
         />
-      </div>
+      </IconWrapper>
     )
   }
 

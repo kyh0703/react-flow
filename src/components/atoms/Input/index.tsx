@@ -1,26 +1,34 @@
+import tw, { styled, css, theme } from 'twin.macro'
+
 type InputProps = {
   placeholder?: string
   hasError?: boolean
   hasBorder?: boolean
 }
 
-const Input = ({ placeholder, hasError, hasBorder }: InputProps) => (
-  <input
-    type="text"
-    placeholder={placeholder}
-    css=[{'focus:outline-none focus:ring-0 box-border pt-3 pr-3 pb-3 pl-2 w-full h-10 leading-5 text-base'}]
-    className={`
-        focus:outline-none
-        focus:ring-0
-        box-border
-        pt-3 pr-3 pb-3 pl-2
-        w-full h-10 leading-5
-        text-base
-        ${hasBorder && 'border border-solid rounded-md'}
-        ${hasError ? 'border-danger' : 'border-border'}
-        placeholder:text-placeholder
-      `}
-  ></input>
-)
+const Input = styled.input<InputProps>(({ hasError, hasBorder }) => [
+  tw`border-none`,
+  tw`box-border pt-3 pr-3 pb-3 pl-2`,
+  tw`w-full h-10 leading-5`,
+  tw`focus:outline-none focus:ring-0`,
+  tw`placeholder:text-placeholder`,
+
+  hasBorder && tw`border border-solid rounded-md`,
+  hasError ? tw`border-danger` : tw`border-border`,
+
+  css`
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type='number'] {
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      appearance: textfield;
+    }
+  `,
+])
 
 export default Input

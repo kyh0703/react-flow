@@ -1,8 +1,5 @@
 import type { Config } from 'tailwindcss'
-
-const px0_10 = { ...Array.from(Array(11)).map((_, i) => `${i}px`) }
-const px0_100 = { ...Array.from(Array(101)).map((_, i) => `${i}px`) }
-const px0_200 = { ...Array.from(Array(201)).map((_, i) => `${i}px`) }
+import { colors, letterSpacings } from './src/themes'
 
 const config: Config = {
   content: [
@@ -11,22 +8,8 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      primary: '#3f51b5',
-      primaryDar: '#2c387e',
-      primaryLight: '#6573c3',
-      secondary: '#f50057',
-      secondaryDark: '#ab003c',
-      secondaryLight: '#f73378',
-      border: '#cdced2',
-      danger: '#ed1c24',
-      dangerDark: '#a50d12',
-      placeholder: '#a0a0a0',
-      gray: '#6b6b6b',
-      black: '#000',
-      white: '#fff',
-      text: '#000',
-    },
+    colors,
+    letterSpacing: letterSpacings,
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import ShapeImage from '.'
+import ShapeImage from './index'
 
 const meta: Meta<typeof ShapeImage> = {
   component: ShapeImage,

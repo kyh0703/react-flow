@@ -49,7 +49,7 @@ export default meta
 type Story = StoryObj<typeof SearchIcon>
 
 export const Normal: Story = {
-  render: (args) => (
+  render: args => (
     <>
       <SearchIcon {...args} />
       <CloudUploadIcon {...args} />
