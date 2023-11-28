@@ -10,38 +10,7 @@ const config: Config = {
   theme: {
     colors,
     letterSpacing: letterSpacings,
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      animation: {
-        dash: 'dash 1.5s ease-in-out infinite',
-        rotate: 'rotate 2s linear infinite',
-      },
-      keyframes: {
-        dash: {
-          '0%': {
-            strokeDasharray: '1, 150',
-            strokeDashoffset: '0',
-          },
-          '50%': {
-            strokeDasharray: '90, 150',
-            strokeDashoffset: '-35',
-          },
-          '100%': {
-            strokeDasharray: '90, 150',
-            strokeDashoffset: '-124',
-          },
-        },
-        rotate: {
-          '100%': {
-            transform: 'rotate(360deg)',
-          },
-        },
-      },
-    },
+    extend: {},
   },
   corePlugins: { preflight: false },
   plugins: [require('@tailwindcss/typography')],

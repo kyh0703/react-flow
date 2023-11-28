@@ -15,6 +15,7 @@ export const Standard: Story = {
     <>
       <Separator>or</Separator>
       <Separator>and</Separator>
+      <Separator />
     </>
   ),
 }
