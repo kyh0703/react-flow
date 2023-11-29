@@ -54,8 +54,8 @@ function withIconStyle(
   Icon: typeof SvgIcon,
 ): React.ComponentType<IconButtonProps> {
   const IconWithStype = (props: IconButtonProps) => {
-    const { onClick, className, color, size = 24, ...rest } = props
-    const cursor = onClick ? 'pointer' : 'default'
+    const { onClick, className, size = 24, ...rest } = props
+    const cursor = onClick ? 'pointer' : ''
 
     return (
       <IconWrapper cursor={cursor} size={size} {...rest}>

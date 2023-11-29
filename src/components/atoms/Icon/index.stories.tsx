@@ -11,7 +11,7 @@ import {
 
 const meta: Meta<typeof SearchIcon> = {
   component: SearchIcon,
-  title: 'Atoms/IconButton',
+  title: 'Atoms/Icon',
   tags: ['autodocs'],
   argTypes: {
     color: {

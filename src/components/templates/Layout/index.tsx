@@ -1,4 +1,5 @@
 import Separator from '@/components/atoms/Separator'
+import tw from 'twin.macro'
 
 type LayoutProps = {
   children?: React.ReactNode
@@ -7,11 +8,10 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-      {/* Header */}
       <div>header</div>
       <main>{children}</main>
       <Separator />
-      <div tw="">footer</div>
+      <div tw="p-1">{/* footer */}</div>
     </>
   )
 }

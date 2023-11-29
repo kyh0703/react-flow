@@ -13,5 +13,5 @@ export const colors = {
   black: '#000',
   white: '#fff',
   text: '#000',
-  icon: '#fff',
+  icon: '#000',
 }
