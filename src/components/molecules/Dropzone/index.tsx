@@ -116,8 +116,8 @@ const Dropzone = ({
   onChange,
   value = [],
   name,
-  acceptedFileTypes = [],
-  hasError,
+  acceptedFileTypes = ['image/png', 'image/jpeg', 'image/jpg', 'image/gif'],
+  hasError = false,
   width = '100%',
   height = '200px',
 }: DropzoneProps) => {
@@ -219,11 +219,6 @@ const Dropzone = ({
       </DropzoneRoot>
     </>
   )
-}
-
-Dropzone.defaultProps = {
-  accetedFileTypes: ['image/png', 'image/jpeg', 'image/jpg', 'image/gif'],
-  hasError: false,
 }
 
 export default Dropzone

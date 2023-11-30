@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 import React, { useState, useEffect } from 'react'
 import tw, { styled, css } from 'twin.macro'
+import Button from '@/components/atoms/Button'
 import Dropzone from '.'
 
 const meta: Meta<typeof Dropzone> = {
@@ -65,16 +66,51 @@ export const WithControl: Story = {
     hasError: false,
   },
   render: args => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [files, setFiles] = useState<File[]>([])
     const handleDrop = (files: File[]) => {
       setFiles(files)
       args && args.onDrop && args.onDrop(files)
     }
 
+    const fetchData = async () => {
+      const res = await fetch('/images/sample/1.jpg')
+      const blob = await res.blob()
+      const file = new File([blob], '1.png', blob)
+      setFiles([...files, file])
+    }
+
+    const clearImages = () => {
+      setFiles([])
+    }
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+      fetchData()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
     return (
       <>
         <div tw="mb-0.5">
           <Dropzone {...args} value={files} onDrop={handleDrop} />
+        </div>
+        <div tw="mb-0.5">
+          <Button onClick={fetchData}>이미지를 추가</Button>
+        </div>
+        <div tw="mb-1">
+          <Button onClick={clearImages}>모든 이지를 클리어</Button>
+        </div>
+        <div>
+          {files.map((f, i) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={URL.createObjectURL(f)}
+              width="100px"
+              key={i}
+              alt="sample"
+            />
+          ))}
         </div>
       </>
     )
