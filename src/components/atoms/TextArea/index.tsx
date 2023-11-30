@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import tw, { styled, css, theme } from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 
 const StyledTextArea = styled.textarea<{ hasError?: boolean }>(
   ({ hasError }) => [

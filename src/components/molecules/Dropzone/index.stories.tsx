@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 import React, { useState, useEffect } from 'react'
-import tw, { styled, css } from 'twin.macro'
 import Button from '@/components/atoms/Button'
+
 import Dropzone from '.'
 
 const meta: Meta<typeof Dropzone> = {

@@ -1,6 +1,6 @@
-import { CheckBoxIcon } from '@/components/atoms/Icon'
 import React, { useCallback, useEffect, useState } from 'react'
-import tw, { styled, css } from 'twin.macro'
+
+import CheckBox from '@/components/molecules/CheckBox'
 
 type Item = {
   label: string
@@ -50,9 +50,11 @@ const FilterGroup = ({
       <div tw="mt-0.5">
         {items.map(({ label, name }, i) => (
           <div key={i}>
-            <CheckBoxIcon
+            <CheckBox
+              name={name}
               label={label}
               checked={!!selected.find(e => e === name)}
+              onChange={handleChange}
             />
           </div>
         ))}
@@ -60,3 +62,5 @@ const FilterGroup = ({
     </>
   )
 }
+
+export default FilterGroup

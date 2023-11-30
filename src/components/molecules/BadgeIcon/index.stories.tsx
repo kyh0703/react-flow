@@ -1,10 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
-import BadgeIcon from '.'
+
 import {
   PersonIcon,
   SearchIcon,
   ShoppingCartIcon,
 } from '@/components/atoms/Icon'
+import BadgeIcon from '.'
 
 const meta: Meta<typeof BadgeIcon> = {
   component: BadgeIcon,

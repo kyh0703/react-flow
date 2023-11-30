@@ -36,7 +36,7 @@ export const Orange: Story = {
 
 export const Green: Story = {
   args: {
-    content: '1',
+    content: '2',
     backgroundColor: '#38a169',
   },
 }

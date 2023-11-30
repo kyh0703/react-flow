@@ -1,5 +1,6 @@
-import Badge from '@/components/atoms/Badge'
 import tw, { styled, css } from 'twin.macro'
+
+import Badge from '@/components/atoms/Badge'
 
 const BadgeIconWrapper = styled.span<{ size: number }>(({ size }) => [
   tw`relative flex items-center`,
