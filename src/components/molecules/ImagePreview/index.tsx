@@ -5,7 +5,7 @@ import { CloseIcon } from '@/components/atoms/Icon'
 const ImagePreviewContainer = styled.div(tw`relative`)
 
 const CloseBox = styled.div(
-  tw`flex absolute top-0 right-0 w-[30px] h-[30px] cursor-pointer`,
+  tw`flex absolute top-0 right-0 w-[30px] h-[30px] cursor-pointer rounded-r-lg`,
 )
 
 type ImagePreviewProps = {
