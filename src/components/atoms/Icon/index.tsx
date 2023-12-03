@@ -1,4 +1,3 @@
-import { colors } from '@/themes'
 import {
   Search,
   PersonOutline,
@@ -16,12 +15,12 @@ import {
 import SvgIcon from '@mui/material/SvgIcon'
 import tw, { styled, css } from 'twin.macro'
 
-export type ThemeColors = keyof typeof colors
+import { colors } from '@/themes'
 
 type IconWrapperProps = {
   size: number
   cursor?: string
-  color?: ThemeColors
+  color?: string
   backgroundColor?: string
 }
 
@@ -29,7 +28,7 @@ const IconWrapper = styled.div<IconWrapperProps>(
   ({ size, cursor, color, backgroundColor }) => [
     tw`inline-block`,
     css`
-      color: ${color ? colors[color] : colors.icon};
+      color: ${color ? color : colors.icon};
       background-color: ${backgroundColor};
       font-size: ${size}px;
       width: ${size}px;
@@ -44,7 +43,7 @@ const IconWrapper = styled.div<IconWrapperProps>(
 
 export type IconButtonProps = {
   onClick?: React.MouseEventHandler<SVGSVGElement>
-  color?: ThemeColors
+  color?: string
   className?: string
   backgroundColor?: string
   size?: number
