@@ -1,5 +1,6 @@
+import Header from '@/components/organisms/Header'
 import Separator from '@/components/atoms/Separator'
-import tw from 'twin.macro'
+import Footer from '@/components/organisms/Footer'
 
 type LayoutProps = {
   children?: React.ReactNode
@@ -8,10 +9,12 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-      <div>header</div>
+      <Header />
       <main>{children}</main>
       <Separator />
-      <div tw="p-1">{/* footer */}</div>
+      <div tw="p-1">
+        <Footer />
+      </div>
     </>
   )
 }

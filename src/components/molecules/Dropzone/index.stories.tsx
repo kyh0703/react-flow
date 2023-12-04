@@ -99,7 +99,7 @@ export const WithControl: Story = {
           <Button onClick={fetchData}>이미지를 추가</Button>
         </div>
         <div tw="mb-1">
-          <Button onClick={clearImages}>모든 이지를 클리어</Button>
+          <Button onClick={clearImages}>모든 이미지를 클리어</Button>
         </div>
         <div>
           {files.map((f, i) => (
