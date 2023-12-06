@@ -11,6 +11,8 @@ import {
   Person,
   Facebook,
   Google,
+  DarkMode,
+  LightMode,
 } from '@mui/icons-material'
 import SvgIcon from '@mui/material/SvgIcon'
 import tw, { styled, css } from 'twin.macro'
@@ -83,3 +85,5 @@ export const GithubIcon = withIconStyle(GitHub)
 export const FacebookIcon = withIconStyle(Facebook)
 export const PersonOutlineIcon = withIconStyle(PersonOutline)
 export const ShoppingCartIcon = withIconStyle(ShoppingCart)
+export const DarkModeIcon = withIconStyle(DarkMode)
+export const LightModeIcon = withIconStyle(LightMode)
