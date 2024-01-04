@@ -25,12 +25,24 @@ const initialNodes = [
   },
   {
     id: 'node-2',
-    position: { x: 0, y: 0 },
-    data: { value: 123 },
+    type: 'output',
+    targetPosition: 'top',
+    position: { x: 0, y: 200 },
+    data: { label: 'node 2' },
+  },
+  {
+    id: 'node-3',
+    type: 'output',
+    targetPosition: 'top',
+    position: { x: 200, y: 200 },
+    data: { label: 'node 3' },
   },
 ]
 
-const initialEdges = [{ id: 'e1-2', source: '1', target: '2' }]
+const initialEdges = [
+  { id: 'edge-1', source: 'node-1', target: 'node-2', sourceHandle: 'a' },
+  { id: 'edge-2', source: 'node-1', target: 'node-3', sourceHandle: 'b' },
+]
 
 const TextUpdaterNode = () => {
   const onChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,7 +72,7 @@ const nodeTypes = { textUpdater: TextUpdaterNode }
 
 const FlowNode = () => {
   const [nodes, setNodes] = useState(initialNodes)
-  const [edges, setEdges] = useState([])
+  const [edges, setEdges] = useState(initialEdges)
 
   const handleNodesChange = useCallback(
     (changes: NodeChange[]) =>
